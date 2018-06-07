@@ -8,3 +8,5 @@ $(EXE_FILE): gameBoard.o main.cpp
 
 gameBoard.o: gameboard.cpp gameboard.hpp
 		$(CC) -c gameBoard.cpp
+
+clean: 
