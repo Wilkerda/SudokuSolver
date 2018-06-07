@@ -59,7 +59,9 @@ void GameBoard::print()
     {
       if ((i % 2) == 0)
       {
-        if (j != 0)
+        if ((i % 3) == 0)
+          std::cout << "==";
+        else if (j != 0)
         {
           std::cout << "--";
         }
@@ -74,22 +76,51 @@ void GameBoard::print()
     std::cout << std::endl;
   }
 }
+
+void GameBoard::generateCols()
+{
+  for (int i = 0; i < sidelength; i++)
+  {
+    for (int j = 0; j < sidelength; j++)
+    {
+      col[i][j] = data[j][i];
+    }
+  }
+}
+
+void GameBoard::generateRows()
+{
+  for (int i = 0; i < sidelength; i++)
+  {
+    for (int j = 0; j < sidelength; j++)
+    {
+      row[i][j] = data[i][j];
+    }
+  }
+}
+
+void GameBoard::generateBoxes()
+{
+  for (int k = 1; k <= 3; k++)
+  {
+    for (int i = 0; i < sidelength; i++)
+    {
+      for (int j = 0; j < sidelength; j++)
+      {
+        box[]
+      }
+    }
+  }
+}
+
 void GameBoard::solver()
 {
   int check;
-  int row[9];
-  int col[9];
-  int box[9];
   check = checkBoard();
   while(check > 0)
   {
 
   }
-}
-
-int* GameBoard::generateRow()
-{
-  
 }
 
 int GameBoard::checkLine(int line)

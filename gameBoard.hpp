@@ -10,6 +10,9 @@ class GameBoard
 {
   private:
     int** data;
+    int row[9][9];
+    int col[9][9];
+    int box[9][9];
     int sidelength;
 
   public:
@@ -20,6 +23,9 @@ class GameBoard
     int checkLine(int);
     int checkBoard();
     void print();
+    void generateRows();
+    void generateCols();
+    void generateBoxes();
 
 };
 
